@@ -1,7 +1,5 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/apirest');
-
 var bookSchema = new mongoose.Schema({
   title: String,
   isbn: String,

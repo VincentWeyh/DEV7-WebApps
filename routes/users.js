@@ -30,7 +30,7 @@ router.put('/:id', function(req, res, next) {
 /* GET /user/id */
 router.get('/:name', function(req, res, next) {
 
-  users.findOne({'name': req.params.nom}, function (err, user) {
+  users.findOne({'name': req.params.name}, function (err, user) {
     if (err) return next(err);
     res.json(user);
   });
