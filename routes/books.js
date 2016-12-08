@@ -66,4 +66,11 @@ router.delete('/isbn/:isbn', function(req, res, next) {
   });
 });
 
+router.post('/userId/:id', function(req, res, next) {
+  Books.create(req.params.id, req.body, function (err, book){
+    if(err) return next(err);
+    res.json(book);
+  });
+});
+
 module.exports = router;
