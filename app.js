@@ -34,7 +34,7 @@ app.use(cors());
 app.use('/', index);
 app.use('/auth', middleware);
 app.use('/auth/users', users);
-app.use('/books', books);
+app.use('/atuh/books', books);
 app.use('/authenticate', authenticate);
 
 // catch 404 and forward to error handler
