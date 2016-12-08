@@ -16,7 +16,7 @@ var authenticate = require('./routes/authenticate');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/apirest');
+mongoose.connect(config.database);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,7 +34,7 @@ app.use(cors());
 app.use('/', index);
 app.use('/auth', middleware);
 app.use('/auth/users', users);
-app.use('/auth/books', books);
+app.use('/books', books);
 app.use('/authenticate', authenticate);
 
 // catch 404 and forward to error handler
